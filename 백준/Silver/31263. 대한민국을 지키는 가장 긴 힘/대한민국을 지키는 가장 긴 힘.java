@@ -19,7 +19,10 @@ public class Main {
 				count++;
 				mem = (arr[i] - '0');
 				if(mem == 0) {
-					mem = arr[i - 1] * 10;
+					mem = (arr[i - 1] - '0') * 10;
+					if(mem == 0) {
+						mem = (arr[i - 2] - '0') * 100;
+					}
 				}
 			}
 		}
